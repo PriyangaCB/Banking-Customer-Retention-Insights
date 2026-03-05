@@ -1,9 +1,9 @@
-**Banking Customer Insights and Retention**
-**Project Overview**
+# Banking Customer Insights and Retention
+# Project Overview
 Customer retention is a critical challenge in the banking industry. Retaining existing customers is significantly more cost-effective than acquiring new ones. This project focuses on analyzing customer data to identify patterns that lead to customer churn and provide actionable insights that help banks improve retention strategies.
 This end-to-end analytics project covers the complete data science workflow including data generation, data preprocessing, exploratory data analysis and predictive modeling.
 
-**Business Problem**
+# Business Problem
 Banks often face customer churn due to factors such as poor engagement, low product usage, or dissatisfaction with services. Identifying customers who are likely to leave the bank allows businesses to take proactive steps such as targeted offers or improved customer support.
 
 This project aims to answer the following questions:
