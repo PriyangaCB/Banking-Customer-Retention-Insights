@@ -72,6 +72,7 @@ Key Insights
 # Machine Learning Model
 1. Logistic Regression - Used as a baseline classification model for churn prediction.
 2. Random Forest Classifier - Used to capture non-linear relationships and improve prediction accuracy.
+
 Model Evaluation Metrics
 | Model               | Accuracy | Precision | Recall | F1   |
 | ------------------- | -------- | --------- | ------ | ---- |
