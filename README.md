@@ -1,26 +1,12 @@
 # Banking Customer Insights and Retention
 # Project Overview
-Customer retention is a critical challenge in the banking industry. Retaining existing customers is significantly more cost-effective than acquiring new ones. This project focuses on analyzing customer data to identify patterns that lead to customer churn and provide actionable insights that help banks improve retention strategies.
-This end-to-end analytics project covers the complete data science workflow including data generation, data preprocessing, exploratory data analysis and predictive modeling.
+Customer retention is a critical challenge in the banking industry. This project analyzes customer behavioral and financial data to identify patterns leading to customer churn and build predictive models that help businesses retain valuable customers.
 
 # Business Problem
-Banks often face customer churn due to factors such as poor engagement, low product usage, or dissatisfaction with services. Identifying customers who are likely to leave the bank allows businesses to take proactive steps such as targeted offers or improved customer support.
-
-This project aims to answer the following questions:
-- Which customer segments are more likely to churn?
-- How do financial attributes influence customer retention?
-- Which products have the highest churn rates?
-- What behavioral patterns indicate a high churn risk?
-- How can businesses identify high-risk customers early?
+Customer churn is a major challenge in the banking industry. Retaining existing customers is significantly cheaper than acquiring new ones. This project analyzes banking customer data to identify factors contributing to customer churn and builds predictive models to identify high-risk customers.
 
 # Project Objectives
-The primary objectives of this project are:
-1. Build a realistic banking dataset for analytical modeling.
-2. Perform data cleaning and preprocessing.
-3. Conduct exploratory data analysis to identify key patterns.
-4. Develop machine learning models to predict customer churn.
-5. Compare different algorithms for prediction performance.
-6. Provide recommendations to improve customer retention.
+The objective of this project is to analyze customer behavioral patterns and build predictive models that identify customers likely to churn, enabling banks to take proactive retention measures.
 
 # Dataset Description
 The dataset simulates banking customer information and financial attributes. It includes demographic details, financial behavior, and product usage metrics.
@@ -28,111 +14,99 @@ The dataset simulates banking customer information and financial attributes. It 
 Dataset Size
 Large synthetic dataset generated using Python to simulate real banking customer data.
 
-Key Features
 Customer Information
-- Customer ID
-- Customer Name
-- Gender
-- Age
-- City
-- Phone Number
+| Feature        | Description                             |
+| -------------- | --------------------------------------- |
+| Customer ID    | Customer unique code                    |
+| Customer Name  | Name                                    |
+| Gender         | Customer gender                         |
+| Age            | Customer Age                            |
+| City           | Customer's city name                    |
+| Phone number   | Customer's mobile number                |
 
 Financial Attributes
-- Credit Score
-- Account Balance
-- Estimated Salary
+| Feature         | Description                             |
+| --------------- | --------------------------------------- |
+| Credit Score    | Customer creditworthiness               |
+| Account Balance | Account balance                         |
+| Estimated Salary| Salary                                  |
 
 Banking Behavior
-- Number of Products
-- Active Member Status
-- Last Transaction Days
+| Feature              | Description                             |
+| -------------------- | --------------------------------------- |
+| NumOfProducts        | Number of bank products used            |
+| Active Member Status | Whether customer actively uses services |
+| Last Transaction Days| Last Transacted Date                    |
 
 Service Interaction
-- Complaint Status
-- Product Type
+| Feature         | Description                             |
+| --------------- | --------------------------------------- |
+| Complaint Status| Previous complaint status               |
+| Product Type    | Type of Product used by customer        |
 
 Target Variable
-- Churn (0 = Customer Retained, 1 = Customer Churned)
-
-# Tools & Technologies
-The project was implemented using the following tools:
-Programming - Python
-Python Libraries
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-
-Development Environment
-- Google Colab / Jupyter Notebook
-
-Version Control
-- GitHub
+| Feature         | Description                                 |
+| --------------- | ------------------------------------------- |
+| Churn           |  0 = Customer Retained, 1 = Customer Churned|
 
 # Project Workflow
-1. Data Generation
-A large synthetic dataset was generated using Python to simulate real banking customer behavior. This includes generating realistic customer demographics, financial attributes, and transactional behavior.
-Key steps:
-- Random generation of customer IDs
-- Gender-consistent names
-- Indian city names
-- Phone numbers starting with +91
-- Credit score-based active membership logic
+Data Generation
+      ↓
+Data Cleaning
+      ↓
+Exploratory Data Analysis
+      ↓
+Feature Engineering
+      ↓
+Machine Learning Model
+      ↓
+Dashboard Visualization
 
-2. Data Cleaning & Preprocessing
-Data preprocessing was performed to ensure the dataset was suitable for analysis and machine learning.
-Key steps included:
-- Handling missing values
-- Removing duplicates
-- Converting data types
-- Encoding categorical variables
-- Feature engineering
-New derived features were created where necessary to improve model performance.
+# Exploratory Data Analysis (EDA)
+Key Insights
+1. Most churned customers have CreditScore below 650
+2. Customers with more than 2 complaints show >50% churn rate
+3. Churn rate is low for Active customers and multi-product holders
+4. South and West regions show higher retention rates
 
-3. Exploratory Data Analysis (EDA)
-Exploratory analysis was conducted to understand relationships between customer attributes and churn behavior.
-Key analysis performed:
-- Customer distribution by gender and city
-- Credit score distribution
-- Balance vs churn analysis
-- Product usage vs churn rate
-- Active members vs inactive members
-- Customer age trends
-
-Visualization tools used:
-- Matplotlib
-- Seaborn
-
-4. Churn Prediction Modeling
-Machine learning models were built to predict the probability of customer churn.
-Algorithms Used
+# Machine Learning Model
 1. Logistic Regression - Used as a baseline classification model for churn prediction.
 2. Random Forest Classifier - Used to capture non-linear relationships and improve prediction accuracy.
 Model Evaluation Metrics
-The models were evaluated using the following metrics:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-Example performance:
-Logistic Regression
-Accuracy: ~0.74
-Precision: ~0.40
-Recall: ~0.53
-F1 Score: ~0.46
+| Model               | Accuracy | Precision | Recall | F1   |
+| ------------------- | -------- | --------- | ------ | ---- |
+| Logistic Regression | 0.75     | 0.40      | 0.53   | 0.46 |
+| Random Forest       | 0.80     | 0.35      | 0.52   | 0.42 |
 
-Random Forest
-Accuracy: ~0.80
-These models help identify customers with high churn risk based on their behavioral and financial patterns.
+# Feature Importance
+Top features influencing churn
+1. ActiveStatus
+2. CreditScore
+3. Salary
+
+# Customer Segmentation
+| Segment | Description                 |
+| ------- | --------------------------- |
+| 0       | Medium balance customers    |
+| 1       | Low balance low income      |
+| 2       | Low balance high income     |
+| 3       | High salary high balance    |
+
+# Dashboard
+The dashboard provides insights into customer behavior and churn patterns including:
+
+- Customer distribution by geography
+- Credit score vs churn relationship
+- Product usage patterns
+- Churn by Age Group
 
 # Key Insights
 Some important insights from the analysis include:
-- Customers with lower credit scores show a higher churn probability.
-- Customers with fewer products are more likely to leave the bank.
-- Inactive customers have significantly higher churn rates.
-- Certain cities show higher churn concentrations.
-- Customers with low engagement and infrequent transactions have higher churn risk.
+1. Customers with lower credit scores show a higher churn probability.
+2. Customers with fewer products are more likely to leave the bank.
+3. Inactive customers have significantly higher churn rates.
+4. Certain cities show higher churn concentrations.
+5. Customers with low engagement and infrequent transactions have higher churn risk.
 
 # Business Recommendations
 Based on the analysis, the following strategies can improve customer retention:
@@ -142,26 +116,8 @@ Based on the analysis, the following strategies can improve customer retention:
 4. Provide financial advisory support for low credit score customers.
 5. Monitor churn probability regularly using predictive models.
 
-# Project Structure
-banking-customer-insights-retention
-data
-- churn-data.csv
-- customers.csv
-- transactions.csv
-- bank-customer-master.csv
-- bank-churn-prediction.csv
-
-notebooks
-- generate-data.ipynb
-- load-data.ipynb
-- data_analysis.ipynb
-- churn_prediction_model.ipynb
-
 # Future Improvements
 Possible improvements to extend the project:
-- Add more machine learning models such as XGBoost
-- Implement hyperparameter tuning
-- Deploy the model using Streamlit
-- Create real-time churn prediction APIs
-- Integrate SQL database pipelines
-- Built interactive Excel and Tableau Dashboard to understand the analysis in a better way
+- Deploy model using Streamlit
+- Add XGBoost model
+- Create automated churn monitoring pipeline
