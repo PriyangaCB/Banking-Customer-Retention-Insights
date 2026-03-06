@@ -1,0 +1,9 @@
+pandas
+numpy
+matplotlib
+seaborn
+sklearn
+SMOTE
+scikit-learn
+faker
+datetime
