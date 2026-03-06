@@ -50,17 +50,17 @@ Target Variable
 | Churn           |  0 = Customer Retained, 1 = Customer Churned|
 
 # Project Workflow
-Data Generation
-      ↓
-Data Cleaning
-      ↓
-Exploratory Data Analysis
-      ↓
-Feature Engineering
-      ↓
-Machine Learning Model
-      ↓
-Dashboard Visualization
+      Data Generation
+            ↓
+      Data Cleaning
+            ↓
+      Exploratory Data Analysis
+            ↓
+      Feature Engineering
+            ↓
+      Machine Learning Model
+            ↓
+      Dashboard Visualization
 
 # Exploratory Data Analysis (EDA)
 Key Insights
